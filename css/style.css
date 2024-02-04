@@ -75,5 +75,79 @@ body {
     display: flex;
     align-items: center;
 
+    margin-bottom: 4rem;
     gap: .6875rem;
+
+    user-select: none;
+}
+
+.filme__container {
+    background-color: #1D1C3B;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.875rem;
+
+    padding: 1.5rem 2.875rem;
+
+    box-shadow: 0.3335185647010803px 0.24931815266609192px 2.4224610328674316px 0px #00000007;
+
+    box-shadow: 1.4366953372955322px 1.0739859342575073px 4.567187309265137px 0px #0000000C;
+
+    box-shadow: 3.4634618759155273px 2.5890731811523438px 7.6376953125px 0px #00000010;
+
+    box-shadow: 6.567749977111816px 4.909649848937988px 12.837499618530273px 0px #00000013;
+
+    box-shadow: 10.903491020202637px 8.150785446166992px 21.3701171875px 0px #00000016;
+
+    box-shadow: 16.624616622924805px 12.42755126953125px 34.439064025878906px 0px #0000001A;
+
+    box-shadow: 23.885059356689453px 17.85501480102539px 53.24785232543945px 0px #0000001F;
+
+    box-shadow: 32.838748931884766px 24.548248291015625px 79px 0px #00000026;
+}
+
+.filme__esquerda {
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4rem;
+}
+
+.filme__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.filme__info h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.filme__acoes {
+    display: flex;
+    align-items: center;
+    gap: 2.8125rem;
+
+    font-weight: 400;
+}
+
+.filme__avaliacao, .filme__favoritar {
+    display: flex;
+    align-items: center;
+    gap: .9375rem;
+}
+
+.filme__description {
+    color: #ACACAC;
+
+    line-height: 2rem;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+    max-width: 600px;
 }
