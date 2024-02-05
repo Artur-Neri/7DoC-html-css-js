@@ -17,6 +17,8 @@ body {
     align-items: center;
     justify-content: center;
 
+    gap: 3rem;
+
     padding: 3.875rem 6.75rem;
 }
 
