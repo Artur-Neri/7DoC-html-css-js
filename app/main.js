@@ -14,8 +14,10 @@ function renderMovie(movie) {
 
     esquerda.appendChild(imagem_container);
 
+    const image = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+
     const filme_imagem = document.createElement('img');
-    filme_imagem.src = movie.image;
+    filme_imagem.src = image;
 
     imagem_container.appendChild(filme_imagem);
 
@@ -90,10 +92,14 @@ const options_movies = {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYmI2OWM5YzBmZjhjMjI5ZTgzMzI2OTc0OGM0Nzg1YiIsInN1YiI6IjY1YzEzYzRiODFhN2ZjMDE2MWVkNjJlNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yvKHyUk7loXbu4b_HegcgSUEWfKV8NFLjdQ0XF5FQrc'
   }
 };
+async function getPopularMovies() {
+  const url = `https://api.themoviedb.org/3/trending/movie/day?language=en-US`
+  const fetchResponse = await fetch(url, options_movies)
+  const { results } = await fetchResponse.json()
+  return results
+} 
 
-fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options_movies)
-  .then(response => response.json())
-  .then(response => response.results)
-  .then(response => response.forEach(filme => movies.push(filme)))
-  .then(renderizaFilmes)
-  .catch(err => console.error(err));
+window.onload = async function() {
+  const movies = await getPopularMovies();
+  movies.forEach(movie => renderMovie(movie))
+}
