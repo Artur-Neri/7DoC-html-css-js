@@ -44,7 +44,7 @@ function renderMovie(movie) {
     acoes__filme.appendChild(avaliacao__filme)
 
     const starImg = document.createElement('img');
-    starImg.src = '/imagens/Star.png';
+    starImg.src = 'imagens/star.png';
 
     const favoritar = document.createElement('span');
     favoritar.textContent = 'Favoritar';
@@ -62,7 +62,7 @@ function renderMovie(movie) {
     acoes__filme.appendChild(favoritarFilme);
 
     const heartImg = document.createElement('img');
-    heartImg.src = '/imagens/Heart.svg';
+    heartImg.src = 'imagens/Heart.svg';
 
     favoritarFilme.appendChild(heartImg);
     favoritarFilme.appendChild(favoritar);
