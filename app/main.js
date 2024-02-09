@@ -44,7 +44,7 @@ function renderMovie(movie) {
     acoes__filme.appendChild(avaliacao__filme)
 
     const starImg = document.createElement('img');
-    starImg.src = 'imagens/star.png';
+    starImg.src = 'imagens/Star.png';
 
     const favoritar = document.createElement('span');
     favoritar.textContent = 'Favoritar';
